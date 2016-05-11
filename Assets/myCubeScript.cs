@@ -5,20 +5,21 @@ public class myCubeScript : MonoBehaviour {
 
 	public float rotateSpeed = 1.0f;
 	public Vector3 spinSpeed = Vector3.zero;
-	public Vector3 spinAxis = Vector3.up;
-	// 
+
+	// same as Vector3.up
+	public Vector3 spinAxis = new Vector3(0, 1, 0);
+
 	// Use this for initialization
 	void Start () {
-		setSize (2.0f);
-		this.transform.position = new Vector3 (0, 5, 3);
 		spinSpeed = new Vector3 (Random.value, Random.value, Random.value); 
 
 		// quick algorithm for range between -1 and 1
 		// dampen, by multiplying by 0.1
+		spinAxis = Vector3.up;
 		spinAxis.x = (Random.value - Random.value) * 0.1f;
-
 	}
 
+	// available, if wanting to call it later 
 	public void setSize(float size)
 	{
 		this.transform.localScale = new Vector3(size, size, size);
