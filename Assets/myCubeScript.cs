@@ -11,7 +11,7 @@ public class myCubeScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		spinSpeed = new Vector3 (Random.value, Random.value, Random.value); 
+		spinSpeed = new Vector3 (Random, Random.value, Random.value); 
 
 		// quick algorithm for range between -1 and 1
 		// dampen, by multiplying by 0.1
